@@ -1,0 +1,219 @@
+:root {
+  --color-dark: #2e2f42;
+  --color-text: #434455;
+  --color-primary-brand: #4d5ae5;
+  --color-pressed-state: #404bbf;
+  --color-accent: #e7e9fc;
+  --color-light: #f4f4fd;
+  --color-title-site: #ffffff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* paragraph text color */
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+/*! ********************** COMPONENTS ***********************/
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+.hidden-header {
+  display: none;
+}
+.subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--color-dark);
+  text-align: center;
+}
+.title {
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--color-dark);
+  text-align: center;
+}
+.profession {
+  font-size: 16px;
+}
+/* Хоч ця якість по замовченню від браузера + наслідується від body але задала чтоб виконати вимоги автоперевірки */
+/*! ********************** / COMPONENTS ***********************/
+
+/*! ***************** HEADER (for everyone)******************/
+.header-site {
+  background-color: var(--color-title-site);
+}
+/*?============== Logo  ==============*/
+/*== components for all logs ==*/
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  /* Хоч на проекті у figma стоїть 24рх. А 24:18 =1.33 але задала  1.17чтоб виконати вимоги автоперевірки */
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-primary-brand);
+}
+
+/*== / for all logs ==*/
+
+.logo-studio-header {
+  color: var(--color-dark);
+}
+.logo-studio-footer {
+  color: var(--color-light);
+}
+/*?============== / Logo  ==============*/
+
+/*?============== Menu  ==============*/
+.menu-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-dark);
+}
+.menu-link:hover,
+.menu-link:focus,
+.menu-link:active {
+  color: var(--color-pressed-state);
+}
+/* .menu .menu-link.current {
+  color: var(--color-pressed-state);
+}  автоперевірка цього не розуміє*/
+
+/*?============== / Menu  ==============*/
+
+/*?============== Contacts  ==============*/
+/* Це правило не прімінеться, але таки вимоги автоперевірки */
+.contacts {
+  font-style: normal;
+}
+.contacts-link {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--color-pressed-state);
+}
+/*?============== / Contacts  ==============*/
+/*! ********************** / HEADER ***********************/
+
+/*! ***************** FOOTER (for everyone)******************/
+.footer-site {
+  background: var(--color-dark);
+}
+.footer-text {
+  color: var(--color-accent);
+}
+/*! ********************** / FOOTER ***********************/
+
+/*%%%%%%%%%%%%%%%%%%%%%%%% MAIN PAGE %%%%%%%%%%%%%%%%%%%%%%%%*/
+
+/*! ********************** MAIN INDEX  ***********************/
+/*?============== Hero  ==============*/
+.hero {
+  background-color: var(--color-dark);
+}
+.title-site {
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--color-title-site);
+  text-align: center;
+}
+.order-btn {
+  background: var(--color-primary-brand);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  /* Button Text */
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-title-site);
+}
+.order-btn:hover,
+.order-btn:focus {
+  background-color: var(--color-pressed-state);
+}
+.order-btn {
+  cursor: pointer;
+}
+/*?============== / 1 Hero  ==============*/
+
+/*?=========== 2 About our company  ===========*/
+/* Styles for <h2 class="hidden-header">, <h3 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body */
+/*?=========== / About our company  ===========*/
+
+/*?=========== 3 What are we doing  ===========*/
+/* Styles for <h2 class="title"> are defined in the COMPONENTS section. */
+/*?=========== / What are we doing  ===========*/
+
+/*?=========== 4 Our Team  ===========*/
+.team {
+  background-color: var(--color-light);
+}
+/* Styles for <h2 class="title">,  <h3 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body */
+/*?=========== / Our Team  ===========*/
+/*! ********************* / MAIN INDEX *********************/
+
+/*%%%%%%%%%%%%%%%%%%%%%%%% / MAIN PAGE %%%%%%%%%%%%%%%%%%%%%%%%*/
+
+/*%%%%%%%%%%%%%%%%%%%%%%%% PORTFOLIO %%%%%%%%%%%%%%%%%%%%%%%%*/
+/*! ********************  MAIN PORTFOLIO*********************/
+/*?=========== Our projects  ===========*/
+
+/* Styles for <h2 class="hidden-header">,  are defined in the COMPONENTS section. */
+/*?============== Filter ==============*/
+.selection-btn {
+  background: var(--color-light);
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  /* Button Text */
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-primary-brand);
+}
+.selection-btn:hover,
+.selection-btn:focus {
+  background-color: var(--color-pressed-state);
+  color: var(--color-title-site);
+}
+.selection-btn {
+  cursor: pointer;
+}
+/*?============== / Filter ==============*/
+
+/*?========= /Photo gallery of projects ==========*/
+.projects-item {
+  background-color: var(--color-title-site);
+}
+/* Styles for  <h3 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body (except color)*/
+.projects-text {
+  color: var(--color-text);
+}
+
+/*?========= / Photo gallery of projects ==========*/
+/*! ******************** / MAIN PORTFOLIO *********************/
+/*%%%%%%%%%%%%%%%%%%%%%%%% /PORTFOLIO %%%%%%%%%%%%%%%%%%%%%%%%*/

@@ -6,6 +6,8 @@
   --color-accent: #e7e9fc;
   --color-light: #f4f4fd;
   --color-title-site: #ffffff;
+  --default-big-gap: 120px;
+  --default-small-gap: 24px;
 }
 
 body {
@@ -18,24 +20,48 @@ body {
 }
 
 /*! ********************** COMPONENTS ***********************/
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
+
 .link {
   text-decoration: none;
+}
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 .hidden-header {
   display: none;
 }
+
 .subtitle {
+  margin-bottom: calc(var(--default-small-gap) / 3);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--color-dark);
-  text-align: center;
 }
 .title {
+  margin-bottom: 72px;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
@@ -52,10 +78,24 @@ body {
 /*! ***************** HEADER (for everyone)******************/
 .header-site {
   background-color: var(--color-title-site);
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--default-small-gap);
+  padding-bottom: var(--default-small-gap);
+}
+
+.nav-site {
+  display: flex;
 }
 /*?============== Logo  ==============*/
 /*== components for all logs ==*/
 .logo {
+  margin-right: 76px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -93,13 +133,26 @@ body {
   color: var(--color-pressed-state);
 }  автоперевірка цього не розуміє*/
 
+.menu {
+  display: flex;
+  gap: 40px;
+}
+/* .menu-item:not(:last-child) {
+  margin-right: 40px;
+} */
+
 /*?============== / Menu  ==============*/
 
 /*?============== Contacts  ==============*/
-/* Це правило не прімінеться, але таки вимоги автоперевірки */
+
 .contacts {
   font-style: normal;
 }
+.contacts-list {
+  display: flex;
+  gap: 40px;
+}
+
 .contacts-link {
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -113,34 +166,38 @@ body {
 /*?============== / Contacts  ==============*/
 /*! ********************** / HEADER ***********************/
 
-/*! ***************** FOOTER (for everyone)******************/
-.footer-site {
-  background: var(--color-dark);
-}
-.footer-text {
-  color: var(--color-accent);
-}
-/*! ********************** / FOOTER ***********************/
-
 /*%%%%%%%%%%%%%%%%%%%%%%%% MAIN PAGE %%%%%%%%%%%%%%%%%%%%%%%%*/
 
 /*! ********************** MAIN INDEX  ***********************/
 /*?============== Hero  ==============*/
 .hero {
   background-color: var(--color-dark);
+  text-align: center;
 }
+
+.hero-container {
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
+
 .title-site {
+  display: block;
+  max-width: 496px;
+  margin: 0 auto calc(2 * var(--default-small-gap));
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--color-title-site);
-  text-align: center;
 }
 .order-btn {
+  padding: 16px 32px;
+  min-width: 169px;
   background: var(--color-primary-brand);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
+
   /* Button Text */
   font-family: inherit;
   font-style: normal;
@@ -161,10 +218,33 @@ body {
 
 /*?=========== 2 About our company  ===========*/
 /* Styles for <h2 class="hidden-header">, <h3 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body */
+
+.about-company-container {
+  padding-top: var(--default-big-gap);
+  padding-bottom: var(--default-big-gap);
+}
+.about-company-list {
+  display: flex;
+  gap: var(--default-small-gap);
+}
+/* .about-company-item:not(:last-child) {
+  margin-right: 24px;
+} */
+
 /*?=========== / About our company  ===========*/
 
 /*?=========== 3 What are we doing  ===========*/
 /* Styles for <h2 class="title"> are defined in the COMPONENTS section. */
+.doing-container {
+  padding-bottom: var(--default-big-gap);
+}
+.doing-list {
+  display: flex;
+  gap: var(--default-small-gap);
+}
+/* .doing-item:not(:last-child) {
+  padding-right: 24px;
+} */
 /*?=========== / What are we doing  ===========*/
 
 /*?=========== 4 Our Team  ===========*/
@@ -172,6 +252,36 @@ body {
   background-color: var(--color-light);
 }
 /* Styles for <h2 class="title">,  <h3 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body */
+.team-container {
+  padding-top: var(--default-big-gap);
+  padding-top: var(--default-big-gap);
+}
+.team-list {
+  display: flex;
+
+  gap: var(--default-small-gap);
+}
+
+.team-item {
+  flex-basis: calc((100% - 3 * var(--default-small-gap)) / 4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-info {
+  background-color: var(--color-title-site);
+  text-align: center;
+  padding: 32px 16px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* .team-item:not(:last-child) {
+  margin-right: 24px;
+} */
+.profession {
+  text-align: center;
+}
+
 /*?=========== / Our Team  ===========*/
 /*! ********************* / MAIN INDEX *********************/
 
@@ -183,10 +293,24 @@ body {
 
 /* Styles for <h2 class="hidden-header">,  are defined in the COMPONENTS section. */
 /*?============== Filter ==============*/
+
+.projects-container {
+  padding-top: 96px;
+  padding-bottom: var(--default-big-gap);
+}
+.selection-portfolio {
+  display: flex;
+  justify-content: center;
+  gap: var(--default-small-gap);
+  margin-bottom: 72px;
+}
+
 .selection-btn {
   background: var(--color-light);
   border: 1px solid var(--color-accent);
   border-radius: 4px;
+  padding: 12px 24px;
+
   /* Button Text */
   font-family: inherit;
   font-weight: 500;
@@ -203,13 +327,30 @@ body {
 .selection-btn {
   cursor: pointer;
 }
+
 /*?============== / Filter ==============*/
 
 /*?========= /Photo gallery of projects ==========*/
-.projects-item {
-  background-color: var(--color-title-site);
+.projects-container {
 }
-/* Styles for  <h3 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body (except color)*/
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(2 * var(--default-small-gap)) var(--default-small-gap);
+}
+
+.projects-item {
+  flex-basis: calc((100% - 2 * var(--default-small-gap)) / 3);
+}
+
+.projects-info {
+  padding: 32px 16px;
+  background: var(--color-title-site);
+  border: 1px solid #e7e9fc;
+}
+
+/* Styles for  <h2 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body (except color)*/
 .projects-text {
   color: var(--color-text);
 }
@@ -217,3 +358,21 @@ body {
 /*?========= / Photo gallery of projects ==========*/
 /*! ******************** / MAIN PORTFOLIO *********************/
 /*%%%%%%%%%%%%%%%%%%%%%%%% /PORTFOLIO %%%%%%%%%%%%%%%%%%%%%%%%*/
+
+/*! ***************** FOOTER (for everyone)******************/
+.footer-site {
+  background: var(--color-dark);
+}
+.footer-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.footer-container .logo {
+  margin-right: 0;
+  margin-bottom: calc(var(--default-small-gap) / 2);
+}
+.footer-text {
+  color: var(--color-accent);
+  max-width: 264px;
+}
+/*! ********************** / FOOTER ***********************/

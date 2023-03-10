@@ -79,6 +79,8 @@ img {
 
 /*! ***************** HEADER (for everyone)******************/
 .header-site {
+  padding-top: var(--default-small-gap);
+  padding-bottom: var(--default-small-gap);
   background-color: var(--color-title-site);
   border-bottom: 1px solid var(--color-accent);
 }
@@ -87,8 +89,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: var(--default-small-gap);
-  padding-bottom: var(--default-small-gap);
 }
 
 .nav-site {
@@ -175,9 +175,6 @@ img {
 .hero {
   background-color: var(--color-dark);
   text-align: center;
-}
-
-.hero-container {
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -221,13 +218,16 @@ img {
 /*?=========== 2 About our company  ===========*/
 /* Styles for <h2 class="hidden-header">, <h3 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body */
 
-.about-company-container {
+.about-company {
   padding-top: var(--default-big-gap);
   padding-bottom: var(--default-big-gap);
 }
 .about-company-list {
   display: flex;
   gap: var(--default-small-gap);
+}
+.about-company-item {
+  width: calc((100% -3 * var(--default-small-gap)) / 4);
 }
 /* .about-company-item:not(:last-child) {
   margin-right: 24px;
@@ -237,7 +237,7 @@ img {
 
 /*?=========== 3 What are we doing  ===========*/
 /* Styles for <h2 class="title"> are defined in the COMPONENTS section. */
-.doing-container {
+.doing {
   padding-bottom: var(--default-big-gap);
 }
 .doing-list {
@@ -252,12 +252,11 @@ img {
 /*?=========== 4 Our Team  ===========*/
 .team {
   background-color: var(--color-light);
+  padding-top: var(--default-big-gap);
+  padding-bottom: var(--default-big-gap);
 }
 /* Styles for <h2 class="title">,  <h3 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body */
-.team-container {
-  padding-top: var(--default-big-gap);
-  padding-top: var(--default-big-gap);
-}
+
 .team-list {
   display: flex;
 
@@ -273,7 +272,7 @@ img {
 .team-info {
   background-color: var(--color-title-site);
   text-align: center;
-  padding: 32px 16px;
+  padding: 32px 0;
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -296,7 +295,7 @@ img {
 /* Styles for <h2 class="hidden-header">,  are defined in the COMPONENTS section. */
 /*?============== Filter ==============*/
 
-.projects-container {
+.projects {
   padding-top: 96px;
   padding-bottom: var(--default-big-gap);
 }
@@ -333,8 +332,6 @@ img {
 /*?============== / Filter ==============*/
 
 /*?========= /Photo gallery of projects ==========*/
-.projects-container {
-}
 
 .projects-list {
   display: flex;
@@ -349,7 +346,9 @@ img {
 .projects-info {
   padding: 32px 16px;
   background: var(--color-title-site);
-  border: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
 }
 
 /* Styles for  <h2 class="subtitle"> are defined in the COMPONENTS section. <p> inherits styles from body (except color)*/
@@ -364,17 +363,19 @@ img {
 /*! ***************** FOOTER (for everyone)******************/
 .footer-site {
   background: var(--color-dark);
-}
-.footer-container {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-.footer-container .logo {
+
+.logo-footer {
+  display: block;
   margin-right: 0;
-  margin-bottom: calc(var(--default-small-gap) / 2);
+  margin-bottom: 16px;
 }
 .footer-text {
   color: var(--color-accent);
+}
+.footer-info {
   max-width: 264px;
 }
 /*! ********************** / FOOTER ***********************/
